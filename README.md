@@ -2,7 +2,7 @@
 
 Basic FlashCard App - Bootstrap, Model based Forms, Services
 
-See the project Live at https://stackblitz.com/github/flashato9/flash-card-app.
+See the project Live at https://stackblitz.com/github/flashato9/Flash-Card-App.
 
 # Development server
 
