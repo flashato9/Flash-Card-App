@@ -1,0 +1,29 @@
+<div
+  id="ato-card"
+  [class.remembered]="this.dataModel.remembered == 1"
+  [class.not_remembered]="this.dataModel.remembered == -1"
+  [class.neutral]="this.dataModel.remembered == 0"
+>
+  <div
+    (click)="this.showBelowHeader = !this.showBelowHeader"
+    id="ato-card-header"
+  >
+    <h1>{{ this.dataModel.title }}</h1>
+    <mat-icon>expand_more</mat-icon>
+  </div>
+  <div id="below-card-header" *ngIf="this.showBelowHeader">
+    <div id="ato-card-content">
+      <p>{{ this.dataModel.content }}</p>
+    </div>
+    <div id="ato-card-footer">
+      <button id="check" (click)="this.dataModel.remembered = 1" mat-button>
+        <mat-icon>check</mat-icon>
+      </button>
+      <button id="clear" (click)="this.dataModel.remembered = -1" mat-button>
+        <mat-icon>clear</mat-icon>
+      </button>
+      <button (click)="edit()" mat-button><mat-icon>edit</mat-icon></button>
+      <button (click)="delete()" mat-button><mat-icon>delete</mat-icon></button>
+    </div>
+  </div>
+</div>

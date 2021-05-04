@@ -1,0 +1,30 @@
+form {
+  border: 1px black solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 0.5rem;
+  h1 {
+    margin: 0;
+  }
+
+  #answer,
+  #question {
+    margin-top: 1rem;
+    input {
+      margin-top: 0.25rem;
+    }
+  }
+  #submit-bar {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    button {
+      margin-right: 1rem;
+    }
+    #submit-button {
+      background-color: rgb(35, 193, 255);
+    }
+  }
+}
+form:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}

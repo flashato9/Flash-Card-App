@@ -1,0 +1,63 @@
+<form
+  novalidate
+  [formGroup]="flashCardForm"
+  *ngIf="[this.flash_s.editing_$ | async]; let editing"
+  (ngSubmit)="editing[0] ? update() : submit()"
+>
+  <h1>Add New Flash Card</h1>
+  <div class="form-group" id="question">
+    <label for="questionc">Question</label>
+    <input
+      class="form-control"
+      type="text"
+      id="questionc"
+      formControlName="question"
+    />
+  </div>
+  <div class="form-group" id="answer">
+    <label for="answerc">Answer</label>
+    <input
+      class="form-control"
+      type="text"
+      id="answerc"
+      formControlName="answer"
+    />
+  </div>
+  <div id="submit-bar">
+    <button
+      type="submit"
+      *ngIf="!editing[0]"
+      id="submit-button"
+      mat-raised-button
+    >
+      Submit
+    </button>
+    <button
+      type="button"
+      *ngIf="!editing[0]"
+      mat-stroked-button
+      (click)="reset()"
+    >
+      Clear
+    </button>
+    <button
+      type="submit"
+      *ngIf="editing[0]"
+      id="submit-button"
+      mat-raised-button
+    >
+      Update
+    </button>
+    <button
+      type="button"
+      *ngIf="editing[0]"
+      mat-stroked-button
+      (click)="cancelEdit()"
+    >
+      Cancel Edit
+    </button>
+  </div>
+</form>
+
+<!-- notes -->
+<!-- https://stackoverflow.com/questions/40968069/ngsubmit-is-called-when-press-click-button -->

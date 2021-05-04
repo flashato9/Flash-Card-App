@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-evenly;
+  height: 80vh;
+  width: 95vw;
+  background-color: peachpuff;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+flash-card-form {
+  width: 30%;
+  align-self: center;
+}
+flash-card-list {
+  width: 60%;
+}

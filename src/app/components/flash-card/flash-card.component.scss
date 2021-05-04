@@ -1,0 +1,72 @@
+$padding_value: 0.5rem;
+$border_radius: 5px;
+#ato-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  h1 {
+    margin: 0;
+  }
+}
+#ato-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+#ato-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: $padding_value;
+  padding-bottom: 0.25rem;
+  border-top-left-radius: $border_radius;
+  border-top-right-radius: $border_radius;
+  border: 1px black solid;
+  mat-icon {
+    align-self: center;
+  }
+  cursor: pointer;
+  text-align: center;
+}
+#ato-card-content {
+  padding: $padding_value;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  p {
+    margin-bottom: 0;
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+  border: 1px black solid;
+}
+
+#ato-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: $padding_value;
+  padding-top: 0.5rem;
+  border: 1px black solid;
+  border-bottom-left-radius: $border_radius;
+  border-bottom-right-radius: $border_radius;
+}
+
+.remembered {
+  $success_color: rgb(127, 187, 127);
+  #ato-card-header {
+    background-color: $success_color;
+  }
+  #ato-card-footer {
+    #check {
+      background-color: $success_color;
+    }
+  }
+}
+
+.not_remembered {
+  $not_success_color: rgb(189, 64, 64);
+  #ato-card-header {
+    background-color: $not_success_color;
+  }
+  #ato-card-footer {
+    #clear {
+      background-color: $not_success_color;
+    }
+  }
+}
